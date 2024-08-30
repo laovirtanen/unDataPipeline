@@ -1,7 +1,6 @@
 import pandas as pd
 
 
-
 # Read the cleaned CSV
 df = pd.read_csv('./data_folder/processed_data_2022.csv')
 
