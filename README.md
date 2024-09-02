@@ -31,6 +31,8 @@ Fact_HealthIndicators: Contains the health indicator data, linked to the dimensi
 
 ![Screenshot 2024-08-30 122726](https://github.com/user-attachments/assets/06319bd6-e4eb-4cd8-83e7-09b1f8cdfa4f)
 
+Also a few more tables were created for learning purposes. These can be found from data_folder.
+
 
 Data Loading Process
 For this project, we decided to use the Redshift Serverless Query Editor V2 to load data directly from Amazon S3 into the data warehouse. This decision was made to keep the process simple and focused on demonstrating the basics of data warehousing.
