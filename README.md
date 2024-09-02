@@ -1,6 +1,6 @@
-#Data Warehouse Project for Health Indicators Analysis
+# Data Warehouse Project for Health Indicators Analysis
 
-###Overview
+### Overview
 
 This portfolio / learning project demonstrates the development and management of a data warehouse for analyzing health indicators using Python and Amazon Redshift. The project showcases the full ETL (Extract, Transform, Load) process, including data cleaning, transformation, and loading into a data warehouse. It also includes designing a robust data model and schema to support efficient querying and analysis.
 
@@ -21,7 +21,7 @@ S3 Bucket for storing the data
 ![Screenshot 2024-09-02 175745](https://github.com/user-attachments/assets/7fb3b78b-b8f2-41bf-b855-f816f645263c)
 
 
-###Data Model and Schema
+### Data Model and Schema
 The data warehouse is designed using a star schema to optimize for query performance and ease of analysis. The schema includes several dimension tables (Dim_Country, Dim_Series, Dim_Time) and a central fact table (Fact_HealthIndicators).
 
 
