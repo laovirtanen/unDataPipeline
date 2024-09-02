@@ -1,19 +1,25 @@
 import pandas as pd
 
-
 # Read the cleaned CSV
 df = pd.read_csv('./data_folder/processed_data_2022.csv')
 
 # Extract unique values for dimension tables
-unique_countries = df['Region/Country/Area'].unique()
+unique_countries = df['Population growth and indicators of fertility and mortality'].unique()
 unique_series = df['Series'].unique()
 unique_years = df['Year'].unique()
+
+# Print unique countries to check if the names are correct
+print("Unique Countries:", unique_countries)
 
 # Create DataFrame for Dim_Country
 df_dim_country = pd.DataFrame({
     'Country_ID': range(1, len(unique_countries) + 1),  # Generate sequential IDs starting from 1
     'Country_Name': unique_countries
 })
+
+# Check the Dim_Country DataFrame to ensure the mapping is correct
+print("Dim_Country DataFrame:")
+print(df_dim_country)
 
 # Create DataFrame for Dim_Series
 df_dim_series = pd.DataFrame({
@@ -28,18 +34,17 @@ df_dim_time = pd.DataFrame({
     'Year': unique_years
 })
 
-# Map Country_Name and Series_Name to IDs in the original DataFrame
+# Map Country_Name, Series_Name, and Year to IDs in the original DataFrame
 country_id_map = df_dim_country.set_index('Country_Name')['Country_ID'].to_dict()
 series_id_map = df_dim_series.set_index('Series_Name')['Series_ID'].to_dict()
 year_id_map = df_dim_time.set_index('Year')['Year_ID'].to_dict()
 
-df['Country_ID'] = df['Region/Country/Area'].map(country_id_map)
+df['Country_ID'] = df['Population growth and indicators of fertility and mortality'].map(country_id_map)
 df['Series_ID'] = df['Series'].map(series_id_map)
 df['Year_ID'] = df['Year'].map(year_id_map)
 
-# Check the mapping (optional)
-print(df[['Region/Country/Area', 'Country_ID', 'Series', 'Series_ID', 'Year', 'Year_ID']].head())
-
+# Check the mapping
+print(df[['Population growth and indicators of fertility and mortality', 'Country_ID', 'Series', 'Series_ID', 'Year', 'Year_ID']].head())
 
 # Create the Fact Table
 df_fact_health_indicators = df[['Country_ID', 'Year_ID', 'Series_ID', 'Value']].copy()
@@ -49,7 +54,6 @@ df_fact_health_indicators.dropna(subset=['Value'], inplace=True)
 
 # Check the fact table (optional)
 print(df_fact_health_indicators.head())
-
 
 # Define output directory
 output_dir = './data_folder/'
