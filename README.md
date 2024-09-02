@@ -38,10 +38,6 @@ Data Loading Process
 For this project, we decided to use the Redshift Serverless Query Editor V2 to load data directly from Amazon S3 into the data warehouse. This decision was made to keep the process simple and focused on demonstrating the basics of data warehousing.
 
 Rationale for Using Query Editor V2
-The Redshift Query Editor V2 provides a straightforward, manual approach to loading data into Amazon Redshift. This approach is particularly useful for:
-
-Learning and Demonstration: It allows us to demonstrate the data loading process without needing to set up additional automation tools or scripts.
-Flexibility: The manual approach provides flexibility in handling initial data loads and schema validation.
-Future Automation: In future projects, we plan to leverage AWS automation tools such as AWS Glue, AWS Lambda, or Step Functions to automate the ETL process. This project serves as a foundational step before moving towards a fully automated data pipeline.
-Steps to Load Data![Screenshot 2024-09-02 182701](https://github.com/user-attachments/assets/8d30a891-568f-4569-a58e-1912446f11cc)
+The Redshift Query Editor V2 provides a straightforward, manual approach to loading data into Amazon Redshift.
+![Screenshot 2024-09-02 182701](https://github.com/user-attachments/assets/8d30a891-568f-4569-a58e-1912446f11cc)
 
