@@ -16,7 +16,7 @@ SQL: For querying the data warehouse and performing data analysis.
 Data Sources
 S3 Bucket for storing the data
 
-Steps to Load Data![Screenshot 2024-09-02 182701](https://github.com/user-attachments/assets/8d30a891-568f-4569-a58e-1912446f11cc)
+![Screenshot 2024-09-02 175745](https://github.com/user-attachments/assets/7fb3b78b-b8f2-41bf-b855-f816f645263c)
 
 
 Data Model and Schema
@@ -41,4 +41,5 @@ The Redshift Query Editor V2 provides a straightforward, manual approach to load
 Learning and Demonstration: It allows us to demonstrate the data loading process without needing to set up additional automation tools or scripts.
 Flexibility: The manual approach provides flexibility in handling initial data loads and schema validation.
 Future Automation: In future projects, we plan to leverage AWS automation tools such as AWS Glue, AWS Lambda, or Step Functions to automate the ETL process. This project serves as a foundational step before moving towards a fully automated data pipeline.
-![Screenshot 2024-09-02 175745](https://github.com/user-attachments/assets/7fb3b78b-b8f2-41bf-b855-f816f645263c)
+Steps to Load Data![Screenshot 2024-09-02 182701](https://github.com/user-attachments/assets/8d30a891-568f-4569-a58e-1912446f11cc)
+
