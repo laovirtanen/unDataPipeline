@@ -37,7 +37,7 @@ Also a few more tables were created for learning purposes. These can be found fr
 
 
 Data Loading Process
-For this project, we decided to use the Redshift Serverless Query Editor V2 to load data directly from Amazon S3 into the data warehouse. This decision was made to keep the process simple and focused on demonstrating the basics of data warehousing.
+For this project, I decided to use the Redshift Serverless Query Editor V2 to load data directly from Amazon S3 into the data warehouse. This decision was made to keep the process simple and focused on demonstrating the basics of data warehousing.
 
 Rationale for Using Query Editor V2
 The Redshift Query Editor V2 provides a straightforward, manual approach to loading data into Amazon Redshift.
